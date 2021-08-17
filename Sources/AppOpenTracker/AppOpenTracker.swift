@@ -23,7 +23,7 @@ public class AppOpenTracker: ObservableObject {
     @Published public var versionFirstOpened: Bool = false
     
     /// A counter that keeps track of how often the app was opened before this session
-    @Published public var countOfAppOpenedBefore: Int = UserDefaults.standard.integer(forKey: "appOpenedCount")
+    @Published public private(set) var countOfAppOpenedBefore: Int = UserDefaults.standard.integer(forKey: "appOpenedCount")
     
     /// A flag that resembles wether this is the first time the user opened the app
     @Published public var appIsFirstOpened: Bool = false
