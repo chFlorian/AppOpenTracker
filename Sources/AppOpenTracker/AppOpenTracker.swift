@@ -21,8 +21,11 @@ public class AppOpenTracker: ObservableObject {
     
     @Published public var versionFirstOpened: Bool = false
     @Published public var countOfAppOpenedBefore: Int = UserDefaults.standard.integer(forKey: "appOpenedCount")
+    @Published public var appIsFirstOpened: Bool = false
     
     private init() {
+        appIsFirstOpened = countOfAppOpenedBefore == 0
+        
         UserDefaults.standard.set(countOfAppOpenedBefore + 1, forKey: "appOpenedCount")
         
         if lastOpenedVersion != currentVersion {
