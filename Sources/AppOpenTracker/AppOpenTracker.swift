@@ -19,8 +19,13 @@ public class AppOpenTracker: ObservableObject {
     public let currentVersion: String = Bundle.main.releaseVersionNumber ?? ""
     public let currentBuild: String = Bundle.main.buildVersionNumber ?? ""
     
+    /// A flag that resembles wether this version was opened for the first time
     @Published public var versionFirstOpened: Bool = false
+    
+    /// A counter that keeps track of how often the app was opened before this session
     @Published public var countOfAppOpenedBefore: Int = UserDefaults.standard.integer(forKey: "appOpenedCount")
+    
+    /// A flag that resembles wether this is the first time the user opened the app
     @Published public var appIsFirstOpened: Bool = false
     
     private init() {
