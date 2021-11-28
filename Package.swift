@@ -7,6 +7,7 @@ let package = Package(
     name: "AppOpenTracker",
     platforms: [
         .iOS(.v13),
+        .macOS(.v11),
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
@@ -24,8 +25,5 @@ let package = Package(
         .target(
             name: "AppOpenTracker",
             dependencies: []),
-        .testTarget(
-            name: "AppOpenTrackerTests",
-            dependencies: ["AppOpenTracker"]),
     ]
 )
