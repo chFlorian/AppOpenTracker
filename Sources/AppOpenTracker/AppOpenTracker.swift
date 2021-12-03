@@ -1,15 +1,6 @@
 import Foundation
 import SwiftUI
 
-extension Bundle {
-    public var releaseVersionNumber: String? {
-        infoDictionary?["CFBundleShortVersionString"] as? String
-    }
-    public var buildVersionNumber: String? {
-        infoDictionary?["CFBundleVersion"] as? String
-    }
-}
-
 public class AppOpenTracker: ObservableObject {
     public static let shared = AppOpenTracker()
     
