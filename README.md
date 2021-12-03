@@ -5,6 +5,8 @@ AppOpenTracker provides an observable AppOpenTracker.shared instance that can be
 - the last build that the app was opened in
 - how often the app was opened
 
+AppOpenTracker also includes an `UpdateService` (thanks to [Antoine v. d. Lee](https://www.avanderlee.com/swift/app-update-notifier/?utm_campaign=coschedule&utm_source=twitter&utm_medium=twannl&utm_content=Creating%20an%20App%20Update%20Notifier%20using%20Combine%20and%20async%2Fawait)) that can be used to check for an available app update.
+
 ## Installation
 AppOpenTracker can be installed via Swift Package Manager, just copy the repository URL into the respective Xcode window:
 
