@@ -24,7 +24,7 @@ public class UpdateService {
     private let urlSession: URLSession
     
     public init(bundleIdentifier: String = Bundle.main.bundleIdentifier!, urlSession: URLSession = .shared) {
-        url = URL(string: "https://itunes.apple.com/br/lookup?bundleId=\(bundleIdentifier)")!
+        url = URL(string: "https://itunes.apple.com/\(Locale.current.regionCode?.lowercased() ?? "us")/lookup?bundleId=\(bundleIdentifier)")!
         self.bundleIdentifier = bundleIdentifier
         self.urlSession = urlSession
     }
